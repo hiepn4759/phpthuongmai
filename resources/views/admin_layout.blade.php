@@ -337,10 +337,15 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="{{URL::to('dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Quan Tri</span></a></li>	
+
 						<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> All Danh Muc</span></a></li>
-						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Danh Muc</span></a></li>
+
+						<li><a href="{{URL::to('/add-danhmuc')}}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Danh Muc</span></a></li>
+
 						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Nhan</span></a></li>
+
 						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Nhan</span></a></li>
+						
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> San Pham</span><span class="label label-important"> New </span></a>
 							<ul>
@@ -369,7 +374,7 @@
 			<!-- start: Content -->
 	<div id="content" class="span10">
 			
-			@yield('admin_content');
+			@yield('admin_content')
 			
 			
        

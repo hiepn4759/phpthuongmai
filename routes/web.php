@@ -22,3 +22,9 @@ Route::get('/logout', 'SuperAdminController@logout');
 Route::get('/admin', 'AdminController@index');
 Route::get('/dashboard', 'AdminController@show_dashboard');
 Route::post('/admin-dashboard', 'AdminController@dashboard');
+
+
+
+//danh muc
+
+Route::get('/add-danhmuc', 'DanhMucController@index');
