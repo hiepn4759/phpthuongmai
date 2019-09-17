@@ -10,4 +10,9 @@ class DanhMucController extends Controller
     {
     	return view('admin.add_danhmuc');
     }
+
+   	public function all_danhmuc()
+   	{
+   		return view('admin.all_danhmuc');
+   	}
 }
