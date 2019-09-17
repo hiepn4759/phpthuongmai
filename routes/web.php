@@ -26,10 +26,11 @@ Route::post('/admin-dashboard', 'AdminController@dashboard');
 
 
 //danh muc
-
 Route::get('/add-danhmuc', 'DanhMucController@index');
 
 
 // all danh muc
-
 Route::get('/all-danhmuc', 'DanhMucController@all_danhmuc');
+
+//luu danh muc
+Route::post('/save-danhmuc', 'DanhMucController@save_danhmuc');

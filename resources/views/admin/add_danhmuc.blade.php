@@ -16,11 +16,25 @@
 <div class="row-fluid sortable">
 	<div class="box span12">
 		<div class="box-header" data-original-title>
-			<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Danh Muc</h2>
-			
+			<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Danh Muc</h2>		
 		</div>
+
+		<p class="alert alert-success">
+			<?php
+				$message= Session::get('message');
+				if($message){
+					echo $message;
+					Session::put('message', null);
+				}				
+				
+
+			?>			
+
+		</p>
+
+
 		<div class="box-content">
-			<form class="form-horizontal" action="" method="post">
+			<form class="form-horizontal" action="{{ url('/save-danhmuc') }}" method="post">
 				{{ csrf_field() }}
 
 			  <fieldset>
@@ -28,7 +42,7 @@
 				<div class="control-group">
 				  <label class="control-label" for="date01">Ten Danh Muc</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge " name="ten_danhmuc">
+					<input type="text" class="input-xlarge " name="danhmuc_ten" required="">
 				  </div>
 				</div>
 
@@ -36,7 +50,7 @@
 				<div class="control-group hidden-phone">
 				  <label class="control-label" for="textarea2">Mieu ta</label>
 				  <div class="controls">
-					<textarea class="cleditor" name="danhmuc_mieuta" rows="3"></textarea>
+					<textarea class="text" name="danhmuc_mieuta" rows="3" required=""></textarea>
 				  </div>
 				</div>
 
