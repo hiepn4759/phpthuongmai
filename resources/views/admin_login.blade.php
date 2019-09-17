@@ -48,6 +48,19 @@
 						<a href="index.html"><i class="halflings-icon home"></i></a>
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
+					
+					<p class="alert-danger">
+						<?php
+							$messege = Session::get('messege');
+								if($messege){
+									echo $messege;
+									Session::put('messege', null);
+								}
+						?>
+					</p>
+
+
+
 					<h2>Login to your account</h2>
 					<form class="form-horizontal" action="{{url('/admin-dashboard')}}" method="post">
 						{{ csrf_field() }}
