@@ -18,7 +18,15 @@ class DanhMucController extends Controller
 
    	public function all_danhmuc()
    	{
-   		return view('admin.all_danhmuc');
+
+   		$all_danhmuc_info = DB::table('tbl_danhmuc')->get();
+   		$quanlu_danhmuc = view('admin.all_danhmuc')
+   			->with('all_danhmuc_info', $all_danhmuc_info);
+
+   		return view('admin_layout')
+   				->with('all_danhmuc', $quanlu_danhmuc);
+
+   		//return view('admin.all_danhmuc');
    	}
 
    	public function save_danhmuc(Request $request)

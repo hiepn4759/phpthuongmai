@@ -50,7 +50,7 @@
 				<div class="control-group hidden-phone">
 				  <label class="control-label" for="textarea2">Mieu ta</label>
 				  <div class="controls">
-					<textarea class="text" name="danhmuc_mieuta" rows="3" required=""></textarea>
+					<textarea class="text" name="danhmuc_mieuta" rows="4" required=""></textarea>
 				  </div>
 				</div>
 
