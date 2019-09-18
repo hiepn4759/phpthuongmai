@@ -3,6 +3,18 @@
 
 <div class="row-fluid sortable">		
 	<div class="box span12">
+		<p class="alert alert-success">
+			<?php
+				$message= Session::get('message');
+				if($message){
+					echo $message;
+					Session::put('message', null);
+				}				
+				
+
+			?>			
+
+		</p>
 		<div class="box-header" data-original-title>
 			<h2><i class="halflings-icon user"></i><span class="break"></span>Members</h2>
 			
@@ -14,8 +26,8 @@
 					  <th>Danh muc ID</th>
 					  <th>Danh muc Name</th>
 					  <th>Danh Muc Xuat ban</th>
-					  <th>Status</th>
-					  <th>Actions</th>
+					  <th>Tinh Trang</th>
+					  <th>Lua Chon</th>
 				  </tr>
 			  </thead>   
 				@foreach( $all_danhmuc_info as $v_cdanhmuc)
@@ -33,15 +45,15 @@
 					</td>
 					<td class="center">
 						@if($v_cdanhmuc -> tinhtrang_danhmuc == 1)
-						<a class="btn btn-danger" href="#">
+						<a class="btn btn-danger" href="{{URL::to('/unactive_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">
 							<i class="halflings-icon white thumbs-down"></i>  
 						</a>
 						@else
-							<a class="btn btn-success" href="#">
+							<a class="btn btn-success" href="{{URL::to('/active_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">
 								<i class="halflings-icon white thumbs-up"></i>  
 							</a>
 						@endif
-						<a class="btn btn-info" href="#">
+						<a class="btn btn-info" href="{{URL::to('/edit_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">
 							<i class="halflings-icon white edit"></i>  
 						</a>
 						<a class="btn btn-danger" href="#">

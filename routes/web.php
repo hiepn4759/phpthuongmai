@@ -34,3 +34,18 @@ Route::get('/all-danhmuc', 'DanhMucController@all_danhmuc');
 
 //luu danh muc
 Route::post('/save-danhmuc', 'DanhMucController@save_danhmuc');
+
+
+// xu ly phan unactive danh muc
+Route::get('/unactive_danhmuc/{danhmuc_id}', 'DanhMucController@unactive_danhmuc');
+
+//xu ly phan active danh muc
+Route::get('/active_danhmuc/{danhmuc_id}', 'DanhMucController@active_danhmuc');
+
+//xu ly phan edit danh muc
+Route::get('/edit_danhmuc/{danhmuc_id}', 'DanhMucController@edit_danhmuc');
+
+
+//xu ly phan save danh muc khi edit
+Route::post('/update-danhmuc/{danhmuc_id}', 'DanhMucController@update_danhmuc');
+

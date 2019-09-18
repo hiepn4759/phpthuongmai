@@ -24,7 +24,7 @@ class DanhMucController extends Controller
    			->with('all_danhmuc_info', $all_danhmuc_info);
 
    		return view('admin_layout')
-   				->with('all_danhmuc', $quanlu_danhmuc);
+   				->with('admin.all_danhmuc', $quanlu_danhmuc);
 
    		//return view('admin.all_danhmuc');
    	}
@@ -44,5 +44,53 @@ class DanhMucController extends Controller
    		// echo '<pre>';
    		// print_r($data);
    		// echo '<pre>';
+   	}
+
+   	public function unactive_danhmuc($danhmuc_id)
+   	{
+   		DB::table('tbl_danhmuc')
+   			->where('danhmuc_id', $danhmuc_id)
+   			->update(['tinhtrang_danhmuc' => 0]);
+   			Session::put('message', 'Thay doi thanh cong!!');
+   			return Redirect::to('/all-danhmuc');
+   	}
+
+   	public function active_danhmuc($danhmuc_id)
+   	{
+   		DB::table('tbl_danhmuc')
+   			->where('danhmuc_id', $danhmuc_id)
+   			->update(['tinhtrang_danhmuc' => 1]);
+   			Session::put('message', 'Thay doi thanh cong!!');
+   			return Redirect::to('/all-danhmuc');
+   	}
+
+   	public function edit_danhmuc($danhmuc_id)
+   	{
+
+   		$danhmuc_info =DB::table('tbl_danhmuc')
+   						->where('danhmuc_id', $danhmuc_id)
+   						->first();
+
+   		$danhmuc_info = view('admin.edit_danhmuc')
+   			->with('danhmuc_info', $danhmuc_info);
+
+   		return view('admin_layout')
+   				->with('admin.edit_danhmuc', $danhmuc_info);
+
+   		// return view('admin.edit_danhmuc');
+   	}
+
+   	public function update_danhmuc(Request $request,$danhmuc_id)
+   	{
+   		$data = array();
+   		$data['danhmuc_ten'] = $request->danhmuc_ten;
+   		$data['danhmuc_mieuta'] = $request->danhmuc_mieuta;
+
+   		DB::table('tbl_danhmuc')
+   			->where('danhmuc_id', $danhmuc_id)
+   			->update($data);
+
+   			Session::get('message', 'Update thanh cong');
+   			return Redirect::to('/all-danhmuc');
    	}
 }
