@@ -93,4 +93,13 @@ class DanhMucController extends Controller
    			Session::get('message', 'Update thanh cong');
    			return Redirect::to('/all-danhmuc');
    	}
+
+   	public function delete_danhmuc($danhmuc_id)
+   	{
+   		DB::table('tbl_danhmuc')
+   			->where('danhmuc_id', $danhmuc_id)
+   			->delete();
+   		Session::get('message', 'Xoa Thanh Cong');
+   		return Redirect::to('/all-danhmuc');
+   	}
 }

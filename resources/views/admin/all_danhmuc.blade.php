@@ -56,7 +56,7 @@
 						<a class="btn btn-info" href="{{URL::to('/edit_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">
 							<i class="halflings-icon white edit"></i>  
 						</a>
-						<a class="btn btn-danger" href="#">
+						<a class="btn btn-danger" href="{{URL::to('/delete_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">
 							<i class="halflings-icon white trash"></i> 
 						</a>
 					</td>

@@ -25,6 +25,7 @@ Route::post('/admin-dashboard', 'AdminController@dashboard');
 
 
 
+/*Danh muc*/
 //danh muc
 Route::get('/add-danhmuc', 'DanhMucController@index');
 
@@ -48,4 +49,10 @@ Route::get('/edit_danhmuc/{danhmuc_id}', 'DanhMucController@edit_danhmuc');
 
 //xu ly phan save danh muc khi edit
 Route::post('/update-danhmuc/{danhmuc_id}', 'DanhMucController@update_danhmuc');
+
+//xu ly phan delete danh muc
+Route::get('/delete_danhmuc/{danhmuc_id}', 'DanhMucController@delete_danhmuc');
+
+
+/*End Danh muc*/
 
