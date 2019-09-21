@@ -342,14 +342,14 @@
 
 						<li><a href="{{URL::to('/add-danhmuc')}}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Danh Muc</span></a></li>
 
-						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Nhan</span></a></li>
+						<li><a href="{{URL::to('/all-nhan')}}"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Nhan</span></a></li>
 
-						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Nhan</span></a></li>
+						<li><a href="{{URL::to('/add-nhan')}}"><i class="icon-dashboard"></i><span class="hidden-tablet"> Add Nhan</span></a></li>
 
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> San Pham</span><span class="label label-important"> New </span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add San Pham</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/add-product')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add San Pham</span></a></li>
 								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> All San Pham</span></a></li>
 								
 							</ul>	

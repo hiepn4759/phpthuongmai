@@ -41,10 +41,10 @@ class DanhMucController extends Controller
    		DB::table('tbl_danhmuc')->insert($data);
    		Session::put('message', 'Danh muc them vao thanh cong!!');
    		return Redirect::to('/add-danhmuc');
-   		// echo '<pre>';
+   		
+   	}// echo '<pre>';
    		// print_r($data);
    		// echo '<pre>';
-   	}
 
    	public function unactive_danhmuc($danhmuc_id)
    	{
