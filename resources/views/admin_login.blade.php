@@ -6,7 +6,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Admin Login</title>
+	<title>Quản Trị Web</title>
 	<meta name="description" content="Metro Admin Template.">
 	<meta name="author" content="Łukasz Holeczek">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -44,10 +44,10 @@
 					
 			<div class="row-fluid">
 				<div class="login-box">
-					<div class="icons">
+					{{-- <div class="icons">
 						<a href="index.html"><i class="halflings-icon home"></i></a>
 						<a href="#"><i class="halflings-icon cog"></i></a>
-					</div>
+					</div> --}}
 					
 					<p class="alert-danger">
 						<?php
@@ -61,31 +61,31 @@
 
 
 
-					<h2>Login to your account</h2>
+					<h2 style="text-align: center;    color: #948080;">Đăng nhập vào tài khoản của bạn</h2>
 					<form class="form-horizontal" action="{{url('/admin-dashboard')}}" method="post">
 						{{ csrf_field() }}
 						<fieldset>							
 							<div class="input-prepend" title="Username">
 								<span class="add-on"><i class="halflings-icon user"></i></span>
-								<input class="input-large span10" name="admin_email"  type="text" placeholder="type email address"/>
+								<input class="input-large span10" name="admin_email"  type="text" placeholder="Nhập địa chỉ Email"/>
 							</div>
 							<div class="clearfix"></div>
 
 							<div class="input-prepend" title="Password">
 								<span class="add-on"><i class="halflings-icon lock"></i></span>
-								<input class="input-large span10" name="admin_password" id="password" type="password" placeholder="type password"/>
+								<input class="input-large span10" name="admin_password" id="password" type="password" placeholder="Nhập Mật Khẩu"/>
 							</div>
 							
 							<div class="button-login">	
-								<button type="submit" class="btn btn-primary">Login</button>
+								<button type="submit" class="btn btn-primary">Đăng Nhập</button>
 							</div>
 							<div class="clearfix"></div>
 						
 					</form>
 					<hr>
-					<h3>Forgot Password?</h3>
+					<h3>Quên Mật Khẩu?</h3>
 					<p>
-						No problem, <a href="#">click here</a> to get a new password.
+						<a href="#">Tạo mới </a> tài khoản của bạn.
 					</p>	
 				</div><!--/span-->
 			</div><!--/row-->

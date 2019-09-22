@@ -65,7 +65,7 @@ class ProductController extends Controller
 
    public function all_product()
     {
-
+      $this->KiemTraAdmin();
       $all_product_info = DB::table('tbl_products')
                     ->join('tbl_danhmuc', 'tbl_products.danhmuc_id', '=', 'tbl_danhmuc.danhmuc_id')
                     ->join('tbl_nhan', 'tbl_products.nhan_id', '=', 'tbl_nhan.nhan_id')
@@ -165,5 +165,14 @@ class ProductController extends Controller
         ->delete();
       Session::get('message', 'Xoa Thanh Cong');
       return Redirect::to('/all-product');
+    }
+    public function KiemTraAdmin()
+    { 
+      $admin_id = Session::get('admin_id');
+      if($admin_id){
+        return;
+      }else{
+        return Redirect::to('/admin')->send();
+      }
     }
 }

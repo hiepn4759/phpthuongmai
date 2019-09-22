@@ -18,7 +18,7 @@ class DanhMucController extends Controller
 
    	public function all_danhmuc()
    	{
-
+         $this->KiemTraAdmin();
    		$all_danhmuc_info = DB::table('tbl_danhmuc')->get();
    		$quanlu_danhmuc = view('admin.all_danhmuc')
    			->with('all_danhmuc_info', $all_danhmuc_info);
@@ -102,4 +102,13 @@ class DanhMucController extends Controller
    		Session::get('message', 'Xoa Thanh Cong');
    		return Redirect::to('/all-danhmuc');
    	}
+      public function KiemTraAdmin()
+       { 
+         $admin_id = Session::get('admin_id');
+         if($admin_id){
+            return;
+         }else{
+            return Redirect::to('/admin')->send();
+         }
+       }
 }

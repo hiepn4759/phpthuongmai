@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Shop Thời Trang</title>
     <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -32,19 +32,18 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i> Điện thoại: +84964681635</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> hiepn4759@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.facebook.com/hjep.nguyen.792"><i class="fa fa-facebook"></i></a></li>
+                                
+                                <li><a href="https://datvietnamtuoidep.blogspot.com/"><i class="fa fa-rss"></i></a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -62,23 +61,23 @@
                         <div class="btn-group pull-right">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    USA
+                                    Việt Nam
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Canada</a></li>
-                                    <li><a href="#">UK</a></li>
+                                    <li><a href="#">Hà Nội</a></li>
+                                    <li><a href="#">Hồ Chí Minh</a></li>
                                 </ul>
                             </div>
                             
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    DOLLAR
+                                    VND
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Canadian Dollar</a></li>
-                                    <li><a href="#">Pound</a></li>
+                                    <li><a href="#">Tiền mặt</a></li>
+                                    <li><a href="#">Thẻ tín dụng</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -86,11 +85,11 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i> Tài Khoản</a></li>
+                                <li><a href="#"><i class="fa fa-star"></i> Danh sách</a></li>
+                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Đơn hàng</a></li>
+                                <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,30 +111,34 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <li><a href="/" class="active">Trang chủ</a></li>
+                                <li class="dropdown"><a href="#">Cửa hàng<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li> 
-                                        <li><a href="checkout.html">Checkout</a></li> 
-                                        <li><a href="cart.html">Cart</a></li> 
-                                        <li><a href="login.html">Login</a></li> 
+                                        <li><a href="#">Sản phẩm</a></li>
+                                        <li><a href="#">Sản phẩm chi tiết</a></li> 
+                                        <li><a href="#">Thanh toán</a></li> 
+                                        <li><a href="#">Đơn Hàng</a></li> 
+                                         
                                     </ul>
                                 </li> 
-                                <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                {{-- <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
                                         <li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
-                                </li> 
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                </li>  --}}
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Đồng Hồ</a></li>
+                                <li><a href="#">Mũ</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="contact-us.html">Liên lạc</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
+                            <input type="text" placeholder="Tìm kiếm"/>
                         </div>
                     </div>
                 </div>
@@ -156,40 +159,40 @@
                         
                         <div class="carousel-inner">
                             <div class="item active">
-                                <div class="col-sm-6">
+                               {{--  <div class="col-sm-6">
                                     <h1><span>E</span>-SHOPPER</h1>
                                     <h2>Free E-Commerce Template</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{asset('frontend/images/home/girl1.jpg')}}" class="girl img-responsive" alt="" />
-                                    <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" />
+                                </div> --}}
+                                <div class="col-sm-12">
+                                    <img src="{{asset('frontend/images/home/4.jpg')}}" class="girl img-responsive" alt="CHUẨN MEN CÁC CHÀNG TRAI" />
+                                   {{--  <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" /> --}}
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-sm-6">
+                                {{-- <div class="col-sm-6">
                                     <h1><span>E</span>-SHOPPER</h1>
                                     <h2>100% Responsive Design</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{asset('frontend/images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                    <img src="{{asset('frontend/images/home/pricing.png"')}}  class="pricing" alt="" />
+                                </div> --}}
+                                <div class="col-sm-12">
+                                    <img src="{{asset('frontend/images/home/1.jpg')}}" class="girl img-responsive" alt="CÔ GÁI NĂNG ĐỘNG" />
+                                    {{-- <img src="{{asset('frontend/images/home/pricing.png"')}}  class="pricing" alt="" /> --}}
                                 </div>
                             </div>
                             
                             <div class="item">
-                                <div class="col-sm-6">
+                               {{--  <div class="col-sm-6">
                                     <h1><span>E</span>-SHOPPER</h1>
                                     <h2>Free Ecommerce Template</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                     <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{asset('frontend/images/home/girl3.jpg"')}} class="girl img-responsive" alt="" />
-                                    <img src="{{asset('frontend/images/home/pricing.png')}}" class="pricing" alt="" />
+                                </div> --}}
+                                <div class="col-sm-12">
+                                    <img src="{{asset('frontend/images/home/5.jpg')}}" class="girl img-responsive" alt="SNEAKER NÀO !!!" />
+                                    {{-- <img src="{{asset('frontend/images/home/pricing.png')}}" class="pricing" alt="" /> --}}
                                 </div>
                             </div>
                             
@@ -213,7 +216,7 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</h2>
+                        <h2>Thể loại</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                             <div class="panel panel-default">
                                <?php
@@ -232,7 +235,7 @@
                             </div><!--/category-products-->
                         </div>
                         <div class="brands_products"><!--brands_products-->
-                            <h2>Brands</h2>
+                            <h2>Nhãn</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
                                     <?php
@@ -250,10 +253,10 @@
                         </div><!--/brands_products-->
                         
                         <div class="price-range"><!--price-range-->
-                            <h2>Price Range</h2>
+                            <h2>Phạm Vi Giá</h2>
                             <div class="well text-center">
-                                 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                                 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+                                 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="2000000" data-slider-step="5" data-slider-value="[200000,2000000]" id="sl2" ><br />
+                                 <b class="pull-left">200000 VNĐ</b> <b class="pull-right">2000000 VNĐ</b>
                             </div>
                         </div><!--/price-range-->
                         
@@ -268,7 +271,7 @@
                     <div class="features_items"><!--features_items-->
                         @yield('content')
                     </div>
-            </div>
+                </div>
         </div>
     </section>
     
@@ -278,8 +281,8 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="companyinfo">
-                            <h2><span>e</span>-shopper</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                            <h2><span>Shop</span></h2>
+                            <p>Cung cấp những sản phẩm thời trang phong phú, mới nhất</p>
                         </div>
                     </div>
                     <div class="col-sm-7">
@@ -287,14 +290,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{URL::to('frontend/images/home/iframe1.png')}}" alt="" />
+                                        <img src="{{URL::to('frontend/images/home/4.jpg')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Đồng Hồ</p>
+                               {{--  <h2>24 DEC 2014</h2> --}}
                             </div>
                         </div>
                         
@@ -302,14 +305,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{URL::to('frontend/images/home/iframe2.png')}}" alt="" />
+                                        <img src="{{URL::to('frontend/images/home/1.jpg')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Quần Áo</p>
+                               {{--  <h2>24 DEC 2014</h2> --}}
                             </div>
                         </div>
                         
@@ -317,14 +320,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{URL::to('frontend/images/home/iframe3.png')}}" alt="" />
+                                        <img src="{{URL::to('frontend/images/home/sliderDay.jpg')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Dày cao cấp</p>
+                                {{-- <h2>24 DEC 2014</h2> --}}
                             </div>
                         </div>
                         
@@ -332,21 +335,21 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{URL::to('frontend/images/home/iframe4.png')}}" alt="" />
+                                        <img src="{{URL::to('frontend/images/home/sliderQuanAo.png')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Quần áo cao cấp</p>
+                                {{-- <h2>24 DEC 2014</h2> --}}
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
                             <img src="{{URL::to('frontend/images/home/map.png')}}" alt="" />
-                            <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+                            <p>KTX B2, Học viện công nghệ bưu chính viễn thông</p>
                         </div>
                     </div>
                 </div>
@@ -358,59 +361,59 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>Service</h2>
+                            <h2>Dịch vụ</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Online Help</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Order Status</a></li>
-                                <li><a href="#">Change Location</a></li>
-                                <li><a href="#">FAQ’s</a></li>
+                                <li><a href="#">Chat Online</a></li>
+                                <li><a href="#">Liên hệ với chúng tôi</a></li>
+                                <li><a href="#">Tình trạng đơn hàng</a></li>
+                                <li><a href="#">Thay đổi địa chỉ</a></li>
+                                {{-- <li><a href="#">FAQ’s</a></li> --}}
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>Quock Shop</h2>
+                            <h2>Sản phẩm Shop</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">T-Shirt</a></li>
-                                <li><a href="#">Mens</a></li>
-                                <li><a href="#">Womens</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Shoes</a></li>
+                              {{--   <li><a href="#">T-Shirt</a></li> --}}
+                                <li><a href="#">Thời Trang Nam</a></li>
+                                <li><a href="#">Thời Tràn Nữ</a></li>
+                                <li><a href="#">Đồng hồ</a></li>
+                                <li><a href="#">Dày dép</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>Policies</h2>
+                            <h2>Chính sách</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privecy Policy</a></li>
-                                <li><a href="#">Refund Policy</a></li>
-                                <li><a href="#">Billing System</a></li>
-                                <li><a href="#">Ticket System</a></li>
+                                <li><a href="#">Điều khoản sử dụng</a></li>
+                                <li><a href="#">Chính sách đặc quyền</a></li>
+                                <li><a href="#">Chính sách hoàn tiền</a></li>
+                                <li><a href="#">Hệ thống thanh toán</a></li>
+                                <li><a href="#">Hệ thống vé</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>About Shopper</h2>
+                            <h2>Giới thiệu về người mua hàng</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Company Information</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Store Location</a></li>
-                                <li><a href="#">Affillate Program</a></li>
-                                <li><a href="#">Copyright</a></li>
+                                <li><a href="#">Thông tin công ty</a></li>
+                                <li><a href="#">Nghề nghiệp</a></li>
+                                <li><a href="#">Vị trí cửa hàng</a></li>
+                                <li><a href="#">Chương trình liên kết</a></li>
+                                <li><a href="#">Bản quyền</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-3 col-sm-offset-1">
                         <div class="single-widget">
-                            <h2>About Shopper</h2>
+                            <h2>Nhận Email thông báo</h2>
                             <form action="#" class="searchform">
-                                <input type="text" placeholder="Your email address" />
+                                <input type="text" placeholder="Nhập email...." />
                                 <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                                <p>Nhận các bản cập nhật mới nhất từ trang web của chúng tôi...</p>
                             </form>
                         </div>
                     </div>
@@ -422,8 +425,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                    <p class="pull-left">Bản quền thuộc về © 2019 Cửa Hàng Shop </p>
+                    <p class="pull-right">Thiết kế bởi <span><a target="_blank" href="http://www.themeum.com"> Nguyen Hiep</a></span></p>
                 </div>
             </div>
         </div>
