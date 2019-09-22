@@ -72,6 +72,18 @@ Route::get('/delete_nhan/{nhan_id}', 'NhanController@delete_nhan');
 /*products*/
 
 Route::get('/add-product', 'ProductController@index');
-//luu nhan
+//luu Product
 Route::post('/save-product', 'ProductController@save_product');
+//all product
+Route::get('/all-product', 'ProductController@all_product');
+// xu ly phan unactive product
+Route::get('/unactive_product/{product_id}', 'ProductController@unactive_product');
+//xu ly phan active product
+Route::get('/active_product/{product_id}', 'ProductController@active_product');
+//xu ly phan edit product
+Route::get('/edit_product/{product_id}', 'ProductController@edit_product');
+//xu ly phan save nhan khi edit
+Route::post('/update-product/{product_id}', 'ProductController@update_product');
+//xu ly phan delete nhan
+Route::get('/delete_product/{product_id}', 'ProductController@delete_product');
 /*end product*/

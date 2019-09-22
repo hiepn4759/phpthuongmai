@@ -9,14 +9,14 @@
 	</li>
 	<li>
 		<i class="icon-edit"></i>
-		<a href="#">Add product</a>
+		<a href="#">Update product</a>
 	</li>
 </ul>
 
 <div class="row-fluid sortable">
 	<div class="box span12">
 		<div class="box-header" data-original-title>
-			<h2><i class="halflings-icon edit"></i><span class="break"></span>Add product</h2>		
+			<h2><i class="halflings-icon edit"></i><span class="break"></span>Update product</h2>		
 		</div>
 
 		<p class="alert alert-success">
@@ -26,15 +26,13 @@
 					echo $message;
 					Session::put('message', null);
 				}				
-				
-
 			?>			
 
 		</p>
 
-
 		<div class="box-content">
-			<form class="form-horizontal" action="{{ url('/save-product') }}" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="{{ url('/update-product', $product_info -> product_id )}}"method="post" enctype="multipart/form-data">
+			
 				{{ csrf_field() }}
 
 			  <fieldset>
@@ -42,10 +40,10 @@
 				<div class="control-group">
 				  <label class="control-label" for="date01">Ten Product</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge " name="product_name" required="">
+					<input type="text" class="input-xlarge " name="product_name" value="{{$product_info -> product_name}}">
 				  </div>
 				</div>
-				
+
 				<div class="control-group">
 					<label class="control-label" for="selectError3">Product danh muc</label>
 					<div class="controls">
@@ -63,40 +61,12 @@
 					  </select>
 					</div>
 				 </div>
-
-				 <div class="control-group">
-					<label class="control-label" for="selectError3">Product Name</label>
-					<div class="controls">
-					  <select id="selectError3" name="nhan_id">
-					  	<?php
-                           $all_nhan_info = DB::table('tbl_nhan')
-                                                ->where('tinhtrang_danhmuc', 1)
-                                                ->get();
-                            foreach($all_nhan_info as $v_cnhan){ ?>
-								<option value="{{$v_cnhan -> nhan_id}}">{{$v_cnhan -> nhan_ten}}</option>
-						<?php } ?>  
-					  </select>
-					</div>
-				  </div>
-
-				<div class="control-group hidden-phone">
-				  <label class="control-label" for="textarea2">Product short</label>
-				  <div class="controls">
-					<textarea class="text" name="product_short_mieuta" rows="4" required=""></textarea>
-				  </div>
-				</div>
-
-				<div class="control-group hidden-phone">
-				  <label class="control-label" for="textarea2">Product long</label>
-				  <div class="controls">
-					<textarea class="text" name="product_long_mieuta" rows="4" required=""></textarea>
-				  </div>
-				</div>
-					
+				
+									
 				<div class="control-group">
 				  <label class="control-label" for="date01">Product Gia</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge " name="product_gia" required="">
+					<input type="text" class="input-xlarge" value="{{$product_info -> product_gia}}" name="product_gia" required="">
 				  </div>
 				</div>
 
@@ -105,18 +75,17 @@
 				  <div class="controls">
 					<input class="input-file uniform_on" name="product_anh" id="fileInput" type="file">
 				  </div>
-				</div>
-				  
+				</div> 
 				<div class="control-group">
 				  <label class="control-label" for="date01">Product Size</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge " name="product_size" required="">
+					<input type="text" class="input-xlarge" value="{{$product_info ->  product_size}}" name="product_size" required="">
 				  </div>
 				</div>
 				<div class="control-group">
 				  <label class="control-label" for="date01">Product Color</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge " name="product_color" required="">
+					<input type="text" class="input-xlarge " value="{{$product_info ->  product_color}}" name="product_color" required="">
 				  </div>
 				</div>	
 				<div class="control-group hidden-phone">
@@ -124,11 +93,10 @@
 				  <div class="controls">
 				  	<input type="checkbox" name="tinhtrang_danhmuc" value="1">
 				  </div>
-				</div>
-
+				</div>         
+				
 				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Add product</button>
-				  <button type="reset" class="btn">Cancel</button>
+				  <button type="submit" class="btn btn-primary">Luu</button>				  
 				</div>
 			  </fieldset>
 			</form>   
