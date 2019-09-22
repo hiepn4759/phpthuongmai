@@ -14,7 +14,8 @@
 
 //frontend site...................
 Route::get('/', 'HomeController@index');
-
+//contact us
+Route::get('/contact-us', 'HomeController@contact_us');
 
 
 //backend routes..................

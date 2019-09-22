@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
     	return view('pages.home_content');
     }
+
+    public function contact_us()
+    {
+    	return view('pages.contact_us');
+    }
 }

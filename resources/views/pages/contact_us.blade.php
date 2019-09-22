@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Thời Trang</title>
+    <title>Liên hệ Cửa Hàng Shop</title>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -22,17 +38,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{URL::to('frontend/images/ico/apple-touch-icon-114-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{URL::to('frontend/images/ico/apple-touch-icon-72-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" href="{{URL::to('frontend/images/ico/apple-touch-icon-57-precomposed.png')}}">
-
-    <style type="text/css" media="screen">
-        img.girl.img-responsive {
-              position: relative;
-              right: 47px;
-        }
-    </style>
 </head><!--/head-->
 
 <body>
-    <header id="header"><!--header-->
+	<header id="header"><!--header-->
         <div class="header_top"><!--header_top-->
             <div class="container">
                 <div class="row">
@@ -152,137 +161,70 @@
             </div>
         </div><!--/header-bottom-->
     </header><!--/header-->
-    
-    <section id="slider"><!--slider-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#slider-carousel" data-slide-to="1"></li>
-                            <li data-target="#slider-carousel" data-slide-to="2"></li>
-                        </ol>
-                        
-                        <div class="carousel-inner">
-                            <div class="item active">
-                               {{--  <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free E-Commerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div> --}}
-                                <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/4.jpg')}}" class="girl img-responsive" alt="CHUẨN MEN CÁC CHÀNG TRAI" />
-                                   {{--  <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" /> --}}
-                                </div>
-                            </div>
-                            <div class="item">
-                                {{-- <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div> --}}
-                                <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/1.jpg')}}" class="girl img-responsive" alt="CÔ GÁI NĂNG ĐỘNG" />
-                                    {{-- <img src="{{asset('frontend/images/home/pricing.png"')}}  class="pricing" alt="" /> --}}
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                               {{--  <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div> --}}
-                                <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/5.jpg')}}" class="girl img-responsive" alt="SNEAKER NÀO !!!" />
-                                    {{-- <img src="{{asset('frontend/images/home/pricing.png')}}" class="pricing" alt="" /> --}}
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section><!--/slider-->
-    
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Thể loại</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                               <?php
-                               $all_danhmuc_info = DB::table('tbl_danhmuc')
-                                                    ->where('tinhtrang_danhmuc', 1)
-                                                    ->get();
-                                foreach($all_danhmuc_info as $v_cdanhmuc){
-                                    ?>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title"><a href="#">{{$v_cdanhmuc->danhmuc_ten}}</a></h4>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-
-                            </div><!--/category-products-->
-                        </div>
-                        <div class="brands_products"><!--brands_products-->
-                            <h2>Nhãn</h2>
-                            <div class="brands-name">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <?php
-                                       $all_nhan_info = DB::table('tbl_nhan')
-                                                            ->where('tinhtrang_danhmuc', 1)
-                                                            ->get();
-                                        foreach($all_nhan_info as $v_cnhan){ ?>
-
-                                            <li><a href="#"> <span class="pull-right">(50)</span>{{$v_cnhan->nhan_ten}}</a></li>
-    
-
-                                   <?php } ?>  
-                                </ul>
-                            </div>
-                        </div><!--/brands_products-->
-                        
-                        <div class="price-range"><!--price-range-->
-                            <h2>Phạm Vi Giá</h2>
-                            <div class="well text-center">
-                                 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="2000000" data-slider-step="5" data-slider-value="[200000,2000000]" id="sl2" ><br />
-                                 <b class="pull-left">200000 VNĐ</b> <b class="pull-right">2000000 VNĐ</b>
-                            </div>
-                        </div><!--/price-range-->
-                        
-                        <div class="shipping text-center"><!--shipping-->
-                            <img src="images/home/shipping.jpg" alt="" />
-                        </div><!--/shipping-->
-                    
-                    </div>
-                </div>
-                
-                <div class="col-sm-9 padding-right">
-                    <div class="features_items"><!--features_items-->
-                        @yield('content')
-                    </div>
-                </div>
-        </div>
-    </section>
-    
-    <footer id="footer"><!--Footer-->
+	 
+	 <div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">    		
+	    		<div class="col-sm-12">    			   			
+					<h2 class="title text-center">Liên Hệ <strong>Với chúng tôi</strong></h2>    			    				    				
+					<div id="gmap" class="contact-map">
+					</div>
+				</div>			 		
+			</div>    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+	    				<h2 class="title text-center">Liện Hệ</h2>
+	    				<div class="status alert alert-success" style="display: none"></div>
+				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+				            <div class="form-group col-md-6">
+				                <input type="text" name="name" class="form-control" required="required" placeholder="Họ tên">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Chủ đề">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Nội dung"></textarea>
+				            </div>                        
+				            <div class="form-group col-md-12">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Xác Nhận">
+				            </div>
+				        </form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<div class="contact-info">
+	    				<h2 class="title text-center">Thông tin liện lạc</h2>
+	    				<address>
+	    					<p>Cửa hàng shop thời trang</p>
+							<p>KTX B2, học viện công nghệ bưu chính viễn thông</p>
+							<!-- <p>Newyork USA</p> -->
+							<p>Điện thoại: +84964681635</p>
+							<!-- <p>Fax: 1-714-252-0026</p> -->
+							<p>Email: hiepn4759@gmail.com</p>
+	    				</address>
+	    				<div class="social-networks">
+	    					<h2 class="title text-center">Mạng Xã hội</h2>
+							<ul>
+								<li>
+									<a href="https://www.facebook.com/hjep.nguyen.792"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="https://datvietnamtuoidep.blogspot.com/"><i class="fa fa-rss"></i></a>
+								</li>
+								
+							</ul>
+	    				</div>
+	    			</div>
+    			</div>    			
+	    	</div>  
+    	</div>	
+    </div><!--/#contact-page-->
+	
+	<footer id="footer"><!--Footer-->
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -439,10 +381,19 @@
         </div>
         
     </footer><!--/Footer-->
-    
+	
 
   
-    <script src="{{asset('frontend/js/jquery.js')}}"></script>
+    <!-- <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+	<script src="js/contact.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script> -->
+     <script src="{{asset('frontend/js/jquery.js')}}"></script>
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery.scrollUp.min.js')}}"></script>
     <script src="{{asset('frontend/js/price-range.js')}}"></script>
