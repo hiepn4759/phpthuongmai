@@ -173,7 +173,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div> --}}
                                 <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/4.jpg')}}" class="girl img-responsive" alt="CHUẨN MEN CÁC CHÀNG TRAI" />
+                                    <img src="{{asset('frontend/images/home/4.jpg')}}" class="girl img-responsive" alt="CHUẨN MEN CÁC CHÀNG TRAI" style="height: 400px" />
                                    {{--  <img src="{{asset('frontend/images/home/pricing.png')}}"  class="pricing" alt="" /> --}}
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div> --}}
                                 <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/1.jpg')}}" class="girl img-responsive" alt="CÔ GÁI NĂNG ĐỘNG" />
+                                    <img src="{{asset('frontend/images/home/1.jpg')}}" class="girl img-responsive" alt="CÔ GÁI NĂNG ĐỘNG" style="height: 400px"/>
                                     {{-- <img src="{{asset('frontend/images/home/pricing.png"')}}  class="pricing" alt="" /> --}}
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div> --}}
                                 <div class="col-sm-12">
-                                    <img src="{{asset('frontend/images/home/5.jpg')}}" class="girl img-responsive" alt="SNEAKER NÀO !!!" />
+                                    <img src="{{asset('frontend/images/home/5.jpg')}}" class="girl img-responsive" alt="SNEAKER NÀO !!!" style="height: 400px"/>
                                     {{-- <img src="{{asset('frontend/images/home/pricing.png')}}" class="pricing" alt="" /> --}}
                                 </div>
                             </div>
