@@ -234,7 +234,7 @@
                                     ?>
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4 class="panel-title"><a href="#">{{$v_cdanhmuc->danhmuc_ten}}</a></h4>
+                                            <h4 class="panel-title"><a href="{{URL::to('/product_by_danhmuc/'.$v_cdanhmuc -> danhmuc_id)}}">{{$v_cdanhmuc->danhmuc_ten}}</a></h4>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -251,7 +251,7 @@
                                                             ->get();
                                         foreach($all_nhan_info as $v_cnhan){ ?>
 
-                                            <li><a href="#"> <span class="pull-right">(50)</span>{{$v_cnhan->nhan_ten}}</a></li>
+                                            <li><a href="{{URL::to('/product_by_nhan/'.$v_cnhan -> nhan_id)}}"> <span class="pull-right">(50)</span>{{$v_cnhan->nhan_ten}}</a></li>
     
 
                                    <?php } ?>  

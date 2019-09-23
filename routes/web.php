@@ -14,6 +14,25 @@
 
 //frontend site...................
 Route::get('/', 'HomeController@index');
+
+//view danh muc boi san pham
+Route::get('/product_by_danhmuc/{danhmuc_id}', 'HomeController@product_by_danhmuc');
+//view nhan voi san pham
+Route::get('/product_by_nhan/{nhan_id}','HomeController@product_by_nhan');
+//view product chi tiet
+Route::get('/product_by_chitiet/{product_id}', 'HomeController@product_by_chitiet');
+
+
+
+
+
+
+
+
+
+
+
+
 //contact us
 Route::get('/contact-us', 'HomeController@contact_us');
 
