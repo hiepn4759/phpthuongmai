@@ -19,7 +19,7 @@
                         <div class="overlay-content">
                             <h2>{{$v_cxuatban->product_gia}} VNĐ</h2>
                             <p>{{$v_cxuatban->product_name}}</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                            <a href="{{URL::to('/product_by_chitiet/'.$v_cxuatban -> product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                         </div>
                     </div>
             </div>

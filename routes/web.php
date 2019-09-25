@@ -23,7 +23,9 @@ Route::get('/product_by_nhan/{nhan_id}','HomeController@product_by_nhan');
 Route::get('/product_by_chitiet/{product_id}', 'HomeController@product_by_chitiet');
 
 
+//add to cart
 
+Route::post('/add-to-cart', 'CartController@add_to_cart');
 
 
 
