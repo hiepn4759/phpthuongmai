@@ -49,16 +49,18 @@
 
 				<span>
 					<span>{{($product_by_chitiet->product_gia)}}VNĐ</span>
+
 					<form action="{{url('/add-to-cart')}}" method="post">
 						{{ csrf_field() }}
 						<label>Số lượng:</label>
-						<input name="soluong" type="text" value="1" />
+						<input name="quantity" type="text" value="1" />
 						<input type="hidden" name="product_id" value="{{$product_by_chitiet->product_id}}">
 						<button type="submit" class="btn btn-fefault cart">
 							<i class="fa fa-shopping-cart"></i>
 							Thêm vào giỏ
 						</button>
 					</form>
+					
 				</span>
 
 			{{-- 	<p><b>Availability:</b> In Stock</p> --}}

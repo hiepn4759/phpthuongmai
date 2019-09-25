@@ -24,9 +24,8 @@ Route::get('/product_by_chitiet/{product_id}', 'HomeController@product_by_chitie
 
 
 //add to cart
-
 Route::post('/add-to-cart', 'CartController@add_to_cart');
-
+Route::get('/show-cart', 'CartController@show_cart');
 
 
 
@@ -37,6 +36,11 @@ Route::post('/add-to-cart', 'CartController@add_to_cart');
 
 //contact us
 Route::get('/contact-us', 'HomeController@contact_us');
+
+
+
+
+
 
 
 //backend routes..................
