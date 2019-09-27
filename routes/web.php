@@ -31,6 +31,8 @@ Route::post('/update-cart', 'CartController@update_cart');
 
 
 
+//checkout
+
 
 
 
