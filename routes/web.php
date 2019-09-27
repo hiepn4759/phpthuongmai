@@ -26,8 +26,8 @@ Route::get('/product_by_chitiet/{product_id}', 'HomeController@product_by_chitie
 //add to cart
 Route::post('/add-to-cart', 'CartController@add_to_cart');
 Route::get('/show-cart', 'CartController@show_cart');
-
-
+Route::get('/delete-to-cart/{rowId}','CartController@delete_to_cart');
+Route::post('/update-cart', 'CartController@update_cart');
 
 
 

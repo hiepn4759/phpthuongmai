@@ -13,17 +13,17 @@ class CartController extends Controller
    public function add_to_cart(Request $request)
    {
 
-   		$quantity=$request->quantity;
+   		$qty =$request->qty;
    		$product_id=$request->product_id;
    		$product_info =DB::table('tbl_products')
 		              ->where('product_id', $product_id)
 		              ->first();
- 		
- 		$data['quantity']=$quantity;	
+
+		$data['qty']=$qty ;	
    		$data['id']=$product_info->product_id;
    		$data['name']=$product_info->product_name; 		
    		$data['price']=$product_info->product_gia;
-   			
+   		$data['weight']=$product_info->product_gia;
    		$data['options']['image']=$product_info->product_anh;	
 		
    		Cart::add($data);
@@ -42,5 +42,20 @@ class CartController extends Controller
 
    	 return view('layout')
    	 		->with('pages.add_to_cart', $quanly_danhmuc);
+   }
+
+   public function delete_to_cart($rowId)
+   {
+   		Cart::update($rowId, 0);
+   		return Redirect::to('/show-cart');
+   }
+
+   public function update_cart(Request $request)
+   {
+		$qty =$request->qty;
+   		$rowId=$request->rowId;
+
+   		Cart::update($rowId, $qty);
+   		return Redirect::to('/show-cart');
    }
 }
