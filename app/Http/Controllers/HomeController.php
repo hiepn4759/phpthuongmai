@@ -33,6 +33,22 @@ class HomeController extends Controller
     	return view('pages.contact_us');
     }
 
+    public function thoi_trang()
+    {
+        $all_xuatban_info = DB::table('tbl_products')
+                    ->join('tbl_danhmuc', 'tbl_products.danhmuc_id', '=', 'tbl_danhmuc.danhmuc_id')
+                    ->join('tbl_nhan', 'tbl_products.nhan_id', '=', 'tbl_nhan.nhan_id')
+                    ->select('tbl_products.*','tbl_danhmuc.danhmuc_ten', 'tbl_nhan.nhan_ten')
+                    ->where('tbl_products.tinhtrang_danhmuc', 1)
+                    ->limit(12)
+                    ->get();
+        $quanly_xuatban_info= view('pages.thoi_trang')
+        ->with('all_xuatban_info', $all_xuatban_info);
+
+      return view('layout')
+          ->with('pages.thoi_trang', $quanly_xuatban_info);
+        return view('pages.thoi_trang');
+    }
 
 
     public function product_by_danhmuc($danhmuc_id)

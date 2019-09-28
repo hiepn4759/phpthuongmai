@@ -36,8 +36,14 @@ Route::post('/update-cart', 'CartController@update_cart');
 
 
 
-//contact us
+//menu us
+
+//thoitrang
+Route::get('/thoi-trang', 'HomeController@thoi_trang');
+
+//contact
 Route::get('/contact-us', 'HomeController@contact_us');
+
 
 
 
@@ -71,6 +77,8 @@ Route::post('/update-danhmuc/{danhmuc_id}', 'DanhMucController@update_danhmuc');
 //xu ly phan delete danh muc
 Route::get('/delete_danhmuc/{danhmuc_id}', 'DanhMucController@delete_danhmuc');
 
+
+Route::get('/dem-so-luong/{danhmuc_id}', 'DanhMucController@dem_sl_nhan');
 /*End Danh muc*/
 
 

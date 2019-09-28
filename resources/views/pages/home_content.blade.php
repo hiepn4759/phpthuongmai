@@ -257,6 +257,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img  style="height: 129px"src="{{URL::to('frontend/images/home/10.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Gshock GBA 800</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img style="height: 129px" src="{{URL::to('frontend/images/home/22.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Adidas new 2019</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
          <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">

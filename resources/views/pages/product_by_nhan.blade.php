@@ -1,7 +1,7 @@
 @extends('layout');
 @section('content')
 
-<h2 class="title text-center">Features Items</h2>
+<h2 class="title text-center">Sản phẩm</h2>
 
 <?php
     foreach($product_by_nhan as $v_cnhan_product){ ?>
@@ -38,7 +38,7 @@
 
 
 <div class="recommended_items"><!--recommended_items-->
-    <h2 class="title text-center">recommended items</h2>
+    <h2 class="title text-center">Khuyến Nghị</h2>
     
     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -49,11 +49,37 @@
                     <div class="product-image-wrapper">
                         <div class="single-products">
                             <div class="productinfo text-center">
-                                <img src="{{URL::to('frontend/images/home/recommend3.jpg')}}" alt="" />
-                                <h2>$56</h2>
-                                <p>Easy Polo Black Edition</p>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                <img style="height: 129px" src="{{URL::to('frontend/images/home/15.png')}}" alt="" />
+                                <h2>200000 VNĐ</h2>
+                                <p>Áo Nam Công Sở</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                             </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img  style="height: 129px"src="{{URL::to('frontend/images/home/10.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Gshock GBA 800</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img style="height: 129px" src="{{URL::to('frontend/images/home/22.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Adidas new 2019</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
                             
                         </div>
                     </div>
@@ -66,11 +92,37 @@
                     <div class="product-image-wrapper">
                         <div class="single-products">
                             <div class="productinfo text-center">
-                                <img src="{{URL::to('frontend/images/home/recommend3.jpg')}}" alt="" />
-                                <h2>$56</h2>
-                                <p>Easy Polo Black Edition</p>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                <img style="height: 129px" src="{{URL::to('frontend/images/home/15.png')}}" alt="" />
+                                <h2>200000 VNĐ</h2>
+                                <p>Áo Nam Công Sở</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                             </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img  style="height: 129px"src="{{URL::to('frontend/images/home/10.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Gshock GBA 800</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                            <img style="height: 129px" src="{{URL::to('frontend/images/home/22.jpg')}}" alt="" />
+                            <h2>400000 VNĐ</h2>
+                            <p>Adidas new 2019</p>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        </div>
                             
                         </div>
                     </div>

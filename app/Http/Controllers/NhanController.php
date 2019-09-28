@@ -96,6 +96,21 @@ class NhanController extends Controller
    		Session::get('message', 'Xoa Thanh Cong');
    		return Redirect::to('/all-nhan');
    	}
+
+
+    public function dem_sl_nhan($nhan_id)
+    {
+      $all_nhan_info = DB::table('tbl_nhan')->where('nhan_id', $nhan_id)->get();
+      $quanly_nhan = view('admin.all_nhan')
+        ->with('all_nhan_info', $all_nhan_info);
+      $count=count($all_nhan_info);
+      echo $count;
+      return view('admin_layout')
+          ->with('admin.all_nhan', $quanly_nhan);
+
+    }
+
+
     public function KiemTraAdmin()
       { 
         $admin_id = Session::get('admin_id');

@@ -134,11 +134,11 @@
                                         <li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li>  --}}
-                                <li><a href="#">Quần</a></li>
-                                <li><a href="#">Áo</a></li>
+                                <li><a href="/thoi-trang">Thời trang</a></li>
                                 <li><a href="#">Đồng Hồ</a></li>
-                                <li><a href="#">Mũ</a></li>
-                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Dày Dép</a></li>
+                                <li><a href="#">Túi Vi</a></li>
+                                <li><a href="#">Dày dép</a></li>
                                 <li><a href="/contact-us">Liên Hệ</a></li>
                             </ul>
                         </div>
@@ -251,7 +251,7 @@
                                                             ->get();
                                         foreach($all_nhan_info as $v_cnhan){ ?>
 
-                                            <li><a href="{{URL::to('/product_by_nhan/'.$v_cnhan -> nhan_id)}}"> <span class="pull-right">(50)</span>{{$v_cnhan->nhan_ten}}</a></li>
+                                            <li><a href="{{URL::to('/product_by_nhan/'.$v_cnhan -> nhan_id)}}"> <span class="pull-right">{{-- {{$v_cnhan->count}} --}}</span>{{$v_cnhan->nhan_ten}}</a></li>
     
 
                                    <?php } ?>  
