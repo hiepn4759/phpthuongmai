@@ -139,7 +139,15 @@
 							<li>Tổng giá thanh toán <span>{{Cart::total()}}</span></li>
 						</ul>
 						
-							<a class="btn btn-default check_out" href="{{URL::to('login-check')}}">Thanh toán</a>
+
+
+                            <?php $customer_id=Session::get('customer_id'); ?>
+                                 <?php if($customer_id != NULL) {?>
+									<a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a>
+							 	<?php }else{?>
+							 		<a href="{{URL::to('/login-check')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a>
+							 	 <?php } ?>
+
 					</div>
 				</div>
 			</div>

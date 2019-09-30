@@ -94,9 +94,29 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-user"></i> Tài Khoản</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Danh sách</a></li>
-                                <li><a href="{{URL::to('login-check')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
-                                <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Đơn hàng</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+
+                            <?php $customer_id=Session::get('customer_id'); ?>
+                                 <?php if($customer_id != NULL) {?>
+
+                                <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                 <?php }else{?>
+                                <li><a href="{{URL::to('/login-check')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                   
+                                <?php } ?>
+
+
+
+                                <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Đơn hàng</a></li> 
+                                
+                                <?php if($customer_id != NULL) {?>
+                                
+                                    <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Xuất</a></li>
+                            
+                                <?php }else{?>
+
+                                    <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+                                
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>

@@ -42,12 +42,12 @@
 							<p>Mẫu hóa đơn</p>
 							<div class="form-one">
 								<form>									
-									<input type="text" placeholder="Địa chỉ email *">									
-									<input type="text" placeholder="Họ tên đầu*">									
-									<input type="text" placeholder="Họ tên cuối *">
-									<input type="text" placeholder="Địa chỉ *">
-									<input type="text" placeholder="Số điện thoại">
-									<input type="text" placeholder="đất nước">
+									<input type="text" name="shipping_email" placeholder="Địa chỉ email *">
+									<input type="text" name="shipping_first_name" placeholder="Họ tên đầu*">
+									<input type="text" name="shipping_last_name" placeholder="Họ tên cuối *">
+									<input type="text" name="shipping_address" placeholder="Địa chỉ *">
+									<input type="text" name="shipping_phone" placeholder="Số điện thoại">
+									<input type="text" name="shipping_city" placeholder="đất nước">
 									<input type="submit" class="btn btn-danger" value="Xác nhận">
 								</form>
 							</div>
