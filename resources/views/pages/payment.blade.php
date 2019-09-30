@@ -69,33 +69,50 @@
 		</div>
 	</section> <!--/#cart_items-->
 
-	<section id="do_action">
-		<div class="container">
-			
-			<div class="row">
-				
-				<div class="col-sm-8">
-					<div class="total_area">
-						<ul>
-							<li>Tổng đơn hàng <span>{{Cart::subtotal()}}</span></li>
-							<li>Thuế <span>{{Cart::tax()}}</span></li>
-							<li>Giao Hàng <span>Miễn Phí</span></li>
-							<li>Tổng giá thanh toán <span>{{Cart::total()}}</span></li>
-						</ul>
+<section id="do_action">
+	<div class="container">
+		
+		
+		<div class="paymentCont col-sm-8">
+					<div class="headingWrap">
+							<h3 class="headingTop text-center">Lựa chọn phương thức thanh toán</h3>	
+							
+					</div>
+					<div >
 						
-
-
-                            <?php $customer_id=Session::get('customer_id'); ?>
-                                 <?php if($customer_id != NULL) {?>
-									<a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a>
-							 	<?php }else{?>
-							 		<a href="{{URL::to('/login-check')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a>
-							 	 <?php } ?>
-
+						<input type="checkbox"> Thanh toán bằng tiền mặt <br>
+						<input type="checkbox"> Thanh toán bằng thẻ
+					</div>
+					{{-- <div class="paymentWrap">
+						<div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
+				            <label class="btn paymentMethod active">
+				            	<div class="method visa"></div>
+				                <input type="radio" name="options" checked> 
+				            </label>
+				            <label class="btn paymentMethod">
+				            	<div class="method master-card"></div>
+				                <input type="radio" name="options"> 
+				            </label>
+				            <label class="btn paymentMethod">
+			            		<div class="method amex"></div>
+				                <input type="radio" name="options">
+				            </label>
+				       <label class="btn paymentMethod">
+			             		<div class="method vishwa"></div>
+				                <input type="radio" name="options"> 
+				            </label>
+				            <label class="btn paymentMethod">
+			            		<div class="method ez-cash"></div>
+				                <input type="radio" name="options"> 
+				            </label> 
+				         
+				        </div>        
+					</div> --}}
+					<div class="footerNavWrap clearfix">
+						<div class="btn btn-success pull-left btn-fyi"><span class="glyphicon glyphicon-chevron-left"></span> Hoàn  Thành</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section><!--/#do_action-->
+	</div>
+</section><!--/#do_action-->
 
 @endsection

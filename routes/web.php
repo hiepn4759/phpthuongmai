@@ -31,6 +31,9 @@ Route::post('/update-cart', 'CartController@update_cart');
 
 
 
+
+
+
 //checkout-login
 
 Route::get('/login-check','CheckoutController@login_check');
@@ -41,6 +44,11 @@ Route::post('/save-shipping-detail','CheckoutController@save_shipping_detail');
 //login logout
 Route::post('/customer_dangnhap','CheckoutController@customer_dangnhap');
 Route::get('/customer_logout','CheckoutController@customer_logout');
+
+//payment
+Route::get('/payment', 'CheckoutController@payment');
+
+
 
 
 

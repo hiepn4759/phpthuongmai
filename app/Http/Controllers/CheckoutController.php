@@ -75,4 +75,10 @@ class CheckoutController extends Controller
     	Session::flush();
     	return Redirect::to('/');
     }
+
+
+    public function payment()
+    {
+    	return view('pages.payment');
+    }
 }
