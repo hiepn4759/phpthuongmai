@@ -36,4 +36,43 @@ class CheckoutController extends Controller
     {
     	return view('pages.checkout');
     }
+
+    public function save_shipping_detail(Request $request)
+    {
+    	$data=array();
+    	$data['shipping_email'] = $request->shipping_email;
+    	$data['shipping_first_name'] = $request->shipping_first_name;
+    	$data['shipping_last_name'] = $request->shipping_last_name;
+    	$data['shipping_address'] = $request->shipping_address;
+    	$data['shipping_phone'] = $request->shipping_phone;
+    	$data['shipping_city'] = $request->shipping_city;
+
+    		$shipping_id = DB::table('tbl_shipping')
+    						->insertGetId($data);
+    					Session::put('shipping_id', $shipping_id);
+    					return Redirect::to('/payment');
+   
+    }
+
+    public function customer_dangnhap(Request $request)
+    {
+    	$customer_email = $request->customer_email;
+    	$password=md5($request->password);
+    	$result=DB::table('tbl_customer')
+    			->where('customer_email', $customer_email)
+    			->first();
+
+    			if($result){
+    				Session::put('customer_id', $result->customer_id);
+    				return Redirect::to('/checkout');
+    			}else{
+    				return Redirect::to('/login_check');
+    			}
+    }
+
+    public function customer_logout()
+    {
+    	Session::flush();
+    	return Redirect::to('/');
+    }
 }

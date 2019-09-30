@@ -36,6 +36,12 @@ Route::post('/update-cart', 'CartController@update_cart');
 Route::get('/login-check','CheckoutController@login_check');
 Route::post('/customer_dangky','CheckoutController@customer_dangky');
 Route::get('/checkout','CheckoutController@checkout');
+Route::post('/save-shipping-detail','CheckoutController@save_shipping_detail');
+
+//login logout
+Route::post('/customer_dangnhap','CheckoutController@customer_dangnhap');
+Route::get('/customer_logout','CheckoutController@customer_logout');
+
 
 
 //menu us

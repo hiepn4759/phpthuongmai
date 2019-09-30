@@ -6,7 +6,10 @@
 				<div class="col-sm-3 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Đăng nhập tài khoản của bạn</h2>
-						<form action="#" method="post">
+						<form action="{{url('/customer_dangnhap')}}" method="post">
+
+							{{csrf_field()}}
+							
 							<input type="email" placeholder="Địa chỉ email" name="customer_email" required="" />
 							<input type="password" placeholder="Mật khẩu" name="password" required=""/>
 							

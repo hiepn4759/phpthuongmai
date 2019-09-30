@@ -110,11 +110,11 @@
                                 
                                 <?php if($customer_id != NULL) {?>
                                 
-                                    <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Xuất</a></li>
+                                    <li><a href="{{URL::to('/customer_logout')}}"><i class="fa fa-lock"></i> Đăng Xuất</a></li>
                             
                                 <?php }else{?>
 
-                                    <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+                                    <li><a href="{{URL::to('/login-check')}}"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
                                 
                                 <?php } ?>
                             </ul>
