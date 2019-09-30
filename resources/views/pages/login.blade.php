@@ -20,7 +20,8 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>Đăng ký tài khoản mới!</h2>
-						<form action="#" method="post">
+						<form action="{{url('/customer_dangky')}}" method="post">
+							{{csrf_field()}}
 							<input type="text" placeholder="Họ tên đầy đủ" name="customer_name" required=""/>
 							<input type="email" placeholder="Địa chỉ email" name="customer_email" required=""/>
 							<input type="password" placeholder="Mật khẩu" name="password" required=""/>
