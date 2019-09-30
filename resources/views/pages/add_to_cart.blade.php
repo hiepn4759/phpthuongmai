@@ -7,7 +7,7 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
+				  <li class="active">Giỏ hàng</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
@@ -71,10 +71,10 @@
 
 	<section id="do_action">
 		<div class="container">
-			<div class="heading">
+			{{-- <div class="heading">
 				<h3>What would you like to do next?</h3>
 				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
-			</div>
+			</div> --}}
 			<div class="row">
 				{{-- <div class="col-sm-6">
 					<div class="chose_area">
@@ -138,8 +138,8 @@
 							<li>Giao Hàng <span>Miễn Phí</span></li>
 							<li>Tổng giá thanh toán <span>{{Cart::total()}}</span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+						
+							<a class="btn btn-default check_out" href="{{URL::to('login-check')}}">Thanh toán</a>
 					</div>
 				</div>
 			</div>

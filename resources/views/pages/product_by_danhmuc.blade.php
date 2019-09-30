@@ -5,7 +5,8 @@
 
 <?php
     foreach($product_by_danhmuc as $v_cdanhmuc_product){ ?>
-
+    
+        
     <div class="col-sm-4">
         <div class="product-image-wrapper">
             <div class="single-products">
@@ -13,13 +14,13 @@
                         <img style="height: 260px" src="{{URL::to($v_cdanhmuc_product->product_anh)}}" alt="" />
                         <h2>{{$v_cdanhmuc_product->product_gia}} VNĐ</h2>
                         <p>{{$v_cdanhmuc_product->product_name}}</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                        <a href="http://127.0.0.1:8000/product_by_chitiet/{product_id}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                     </div>
                     <div class="product-overlay">
                         <div class="overlay-content">
                             <h2>{{$v_cdanhmuc_product->product_gia}} VNĐ</h2>
                             <p>{{$v_cdanhmuc_product->product_name}}</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                            <a href="{{URL::to('/product_by_chitiet/'.$v_cdanhmuc_product -> product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                         </div>
                     </div>
             </div>
@@ -31,7 +32,7 @@
             </div>
         </div>
     </div> 
-
+        
     <?php } ?>  
 </div><!--features_items-->
 

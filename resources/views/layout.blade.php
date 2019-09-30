@@ -94,7 +94,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-user"></i> Tài Khoản</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Danh sách</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                <li><a href="{{URL::to('login-check')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
                                 <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Đơn hàng</a></li>
                                 <li><a href="login.html"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
                             </ul>
@@ -123,7 +123,7 @@
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="#">Sản phẩm</a></li>
                                         <li><a href="#">Sản phẩm chi tiết</a></li> 
-                                        <li><a href="#">Thanh toán</a></li> 
+                                        <li><a href="{{URL::to('login-check')}}">Thanh toán</a></li> 
                                         <li><a href="{{URL::to('/show-cart')}}">Đơn Hàng</a></li> 
                                          
                                     </ul>
