@@ -48,7 +48,11 @@ Route::get('/customer_logout','CheckoutController@customer_logout');
 //payment
 Route::get('/payment', 'CheckoutController@payment');
 
+//order-place
+Route::post('/order-place','CheckoutController@order_place');
 
+//quan ly order
+Route::get('/manage-order', 'CheckoutController@manage_order');
 
 
 
@@ -139,3 +143,8 @@ Route::post('/update-product/{product_id}', 'ProductController@update_product');
 //xu ly phan delete nhan
 Route::get('/delete_product/{product_id}', 'ProductController@delete_product');
 /*end product*/
+
+
+
+
+

@@ -78,39 +78,19 @@
 							<h3 class="headingTop text-center">Lựa chọn phương thức thanh toán</h3>	
 							
 					</div>
-					<div >
-						
-						<input type="checkbox"> Thanh toán bằng tiền mặt <br>
-						<input type="checkbox"> Thanh toán bằng thẻ
-					</div>
-					{{-- <div class="paymentWrap">
-						<div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
-				            <label class="btn paymentMethod active">
-				            	<div class="method visa"></div>
-				                <input type="radio" name="options" checked> 
-				            </label>
-				            <label class="btn paymentMethod">
-				            	<div class="method master-card"></div>
-				                <input type="radio" name="options"> 
-				            </label>
-				            <label class="btn paymentMethod">
-			            		<div class="method amex"></div>
-				                <input type="radio" name="options">
-				            </label>
-				       <label class="btn paymentMethod">
-			             		<div class="method vishwa"></div>
-				                <input type="radio" name="options"> 
-				            </label>
-				            <label class="btn paymentMethod">
-			            		<div class="method ez-cash"></div>
-				                <input type="radio" name="options"> 
-				            </label> 
-				         
-				        </div>        
-					</div> --}}
-					<div class="footerNavWrap clearfix">
-						<div class="btn btn-success pull-left btn-fyi"><span class="glyphicon glyphicon-chevron-left"></span> Hoàn  Thành</div>
-					</div>
+					<form action="{{url('/order-place')}}" method="post">
+						{{csrf_field()}}				
+						<div >
+							<input type="checkbox" name="payment_method" value="tienmat"> Thanh toán bằng tiền mặt <br>
+							<input type="checkbox" name="payment_method" value="thecart"> Thanh toán bằng thẻ
+						</div>
+
+						<div class="footerNavWrap clearfix">
+							
+							<input type="submit" class="btn btn-success pull-left btn-fyi" value="Hoàn Thành">
+						</div>
+					</form>
+					
 				</div>
 	</div>
 </section><!--/#do_action-->
