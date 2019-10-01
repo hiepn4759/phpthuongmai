@@ -21,7 +21,7 @@ Route::get('/product_by_danhmuc/{danhmuc_id}', 'HomeController@product_by_danhmu
 Route::get('/product_by_nhan/{nhan_id}','HomeController@product_by_nhan');
 //view product chi tiet
 Route::get('/product_by_chitiet/{product_id}', 'HomeController@product_by_chitiet');
-
+	
 
 //add to cart
 Route::post('/add-to-cart', 'CartController@add_to_cart');
@@ -47,7 +47,6 @@ Route::get('/customer_logout','CheckoutController@customer_logout');
 
 //payment
 Route::get('/payment', 'CheckoutController@payment');
-
 //order-place
 Route::post('/order-place','CheckoutController@order_place');
 
@@ -57,7 +56,6 @@ Route::get('/manage-order', 'CheckoutController@manage_order');
 
 
 //menu us
-
 //thoitrang
 Route::get('/thoi-trang', 'HomeController@thoi_trang');
 
@@ -72,9 +70,9 @@ Route::get('/contact-us', 'HomeController@contact_us');
 
 
 //backend routes..................
+Route::get('/dashboard', 'SuperAdminController@index');
 Route::get('/logout', 'SuperAdminController@logout');
 Route::get('/admin', 'AdminController@index');
-Route::get('/dashboard', 'SuperAdminController@index');
 Route::post('/admin-dashboard', 'AdminController@dashboard');
 
 

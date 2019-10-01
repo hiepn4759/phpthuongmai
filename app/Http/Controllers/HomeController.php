@@ -54,8 +54,7 @@ class HomeController extends Controller
     public function product_by_danhmuc($danhmuc_id)
     {
         $product_by_danhmuc = DB::table('tbl_products')
-                    ->join('tbl_danhmuc', 'tbl_products.danhmuc_id', '=', 'tbl_danhmuc.danhmuc_id')
-                    
+                    ->join('tbl_danhmuc', 'tbl_products.danhmuc_id', '=', 'tbl_danhmuc.danhmuc_id')                 
                     ->select('tbl_products.*','tbl_danhmuc.danhmuc_ten')
                     ->where('tbl_products.tinhtrang_danhmuc', 1)
                     ->where('tbl_danhmuc.danhmuc_id', $danhmuc_id)

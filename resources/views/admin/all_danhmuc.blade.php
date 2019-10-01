@@ -16,18 +16,18 @@
 
 		</p>
 		<div class="box-header" data-original-title>
-			<h2><i class="halflings-icon user"></i><span class="break"></span>Members</h2>
+			<h2><i class="halflings-icon user"></i><span class="break"></span>Danh Mục Sản Phẩm</h2>
 			
 		</div>
 		<div class="box-content">
 			<table class="table table-striped table-bordered bootstrap-datatable datatable">
 			  <thead>
 				  <tr>
-					  <th>Danh muc ID</th>
-					  <th>Danh muc Name</th>
-					  <th>Danh Muc Xuat ban</th>
-					  <th>Tinh Trang</th>
-					  <th>Lua Chon</th>
+					  <th>ID Danh mục</th>
+					  <th>Tên danh mục sản phẩm</th>
+					  <th>Thông tin danh mục</th>
+					  <th>Tình trạng</th>
+					  <th>Lực chọn</th>
 				  </tr>
 			  </thead>   
 				@foreach( $all_danhmuc_info as $v_cdanhmuc)
@@ -38,9 +38,9 @@
 					<td class="center">{{ $v_cdanhmuc -> danhmuc_mieuta }}</td>
 					<td class="center">
 						@if($v_cdanhmuc -> tinhtrang_danhmuc == 1)
-						<span class="label label-success">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Hoat Dong</span>
+						<span class="label label-success">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Hoạt động</span>
 						@else
-							<span class="label label-danger">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Khong Khong Hoat Dong </span>
+							<span class="label label-danger">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Không hoạt động</span>
 						@endif
 					</td>
 					<td class="center">

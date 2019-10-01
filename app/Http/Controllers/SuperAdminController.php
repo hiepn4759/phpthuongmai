@@ -21,7 +21,7 @@ class SuperAdminController extends Controller
     {
     	// Session::put('admin_name', null);
     	// Session::put('admin_id', null);
-    	Session::flush();
+    	Session::flush();//xóa toàn bộ session
     	return Redirect::to('/admin');
     }
     public function KiemTraAdmin()
@@ -33,5 +33,6 @@ class SuperAdminController extends Controller
     		return Redirect::to('/admin')->send();
     	}
     }
+   
 
 }

@@ -16,23 +16,23 @@
 
 		</p>
 		<div class="box-header" data-original-title>
-			<h2><i class="halflings-icon user"></i><span class="break"></span>Product</h2>
+			<h2><i class="halflings-icon user"></i><span class="break"></span>Sản phẩm</h2>
 			
 		</div>
 		<div class="box-content">
 			<table class="table table-striped table-bordered bootstrap-datatable datatable">
 			  <thead>
 				  <tr>
-					  <th>Product Id</th>
-					  <th>Product Name</th>
-					  <th>Danh muc Name</th>
-					  <th>Nhan Name</th>					  
-					  <th>product_gia</th>
-					  <th>product_anh</th>
-					  <th>product_size</th>
-					  <th>product_color</th>
+					  <th>ID sản phẩm</th>
+					  <th>Tên sản phầm</th>
+					  <th>Tên danh mục sản phẩm</th>
+					  <th>Tên nhãn</th>					  
+					  <th>Giá</th>
+					  <th>Ảnh</th>
+					  <th>Kích cỡ</th>
+					  <th>Màu</th>
 					
-					  <th>Lua Chon</th>
+					  <th>Lựa chọn</th>
 				  </tr>
 			  </thead>   
 				@foreach( $all_product_info as $v_cproduct)
@@ -52,9 +52,9 @@
 					
 					<td class="center">
 						@if($v_cproduct -> tinhtrang_danhmuc == 1)
-						<span class="label label-success">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Hoat Dong</span>
+						<span class="label label-success">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Hoạt động</span>
 						@else
-							<span class="label label-danger">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Khong Khong Hoat Dong </span>
+							<span class="label label-danger">{{-- {{ $v_cdanhmuc -> tinhtrang_danhmuc }} --}}Không hoạt động</span>
 						@endif
 					</td>
 					<td class="center">

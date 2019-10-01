@@ -26,7 +26,7 @@ class DanhMucController extends Controller
    		return view('admin_layout')
    				->with('admin.all_danhmuc', $quanlu_danhmuc);
 
-   		//return view('admin.all_danhmuc');
+   		
    	}
 
    	public function save_danhmuc(Request $request)
@@ -42,9 +42,7 @@ class DanhMucController extends Controller
    		Session::put('message', 'Danh muc them vao thanh cong!!');
    		return Redirect::to('/add-danhmuc');
    		
-   	}// echo '<pre>';
-   		// print_r($data);
-   		// echo '<pre>';
+   	}
 
    	public function unactive_danhmuc($danhmuc_id)
    	{

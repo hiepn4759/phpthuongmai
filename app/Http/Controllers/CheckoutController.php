@@ -32,6 +32,22 @@ class CheckoutController extends Controller
     						Session::put('customer_name',$request->customer_name );
     						return Redirect('/checkout');
     }
+    
+    public function customer_dangnhap(Request $request)
+    {
+        $customer_email = $request->customer_email;
+        $password=md5($request->password);
+        $result=DB::table('tbl_customer')
+                ->where('customer_email', $customer_email)
+                ->first();
+
+                if($result){
+                    Session::put('customer_id', $result->customer_id);
+                    return Redirect::to('/checkout');
+                }else{
+                    return Redirect::to('/login_check');
+                }
+    }
 
     public function checkout()
     {
@@ -55,21 +71,7 @@ class CheckoutController extends Controller
    
     }
 
-    public function customer_dangnhap(Request $request)
-    {
-    	$customer_email = $request->customer_email;
-    	$password=md5($request->password);
-    	$result=DB::table('tbl_customer')
-    			->where('customer_email', $customer_email)
-    			->first();
-
-    			if($result){
-    				Session::put('customer_id', $result->customer_id);
-    				return Redirect::to('/checkout');
-    			}else{
-    				return Redirect::to('/login_check');
-    			}
-    }
+    
 
     public function customer_logout()
     {
